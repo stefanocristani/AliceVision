@@ -45,7 +45,7 @@ template <class ImageT, class MaskFuncT>
 void process(const std::string &dstColorImage, const IntrinsicBase* cam, const oiio::ParamValueList & metadata, const std::string & srcImage, bool evCorrection, float exposureCompensation, MaskFuncT && maskFunc)
 {
   ImageT image, image_ud;
-  readImage(srcImage, image, image::EImageColorSpace::LINEAR);
+  readImage(srcImage, image, image::EImageColorSpace::SRGB_LINEAR);
 
   //exposure correction
   if(evCorrection)
