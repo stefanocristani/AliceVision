@@ -784,12 +784,12 @@ bool tryLoadMask(Image<unsigned char>* mask, const std::vector<std::string>& mas
 
             if (fs::exists(idMaskPath))
             {
-                readImage(idMaskPath.string(), *mask, EImageColorSpace::LINEAR);
+                readImage(idMaskPath.string(), *mask, EImageColorSpace::SRGB_LINEAR);
                 return true;
             }
             else if (fs::exists(nameMaskPath))
             {
-                readImage(nameMaskPath.string(), *mask, EImageColorSpace::LINEAR);
+                readImage(nameMaskPath.string(), *mask, EImageColorSpace::SRGB_LINEAR);
                 return true;
             }
         }
